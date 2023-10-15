@@ -18,8 +18,8 @@ public class DBConnection {
 
     public static Connection getConnection(){
         try {
-            Class.forName(className: DRIVER);
-            connection = DriverManager.getConnection(url: URL, user: USER, password: PASSWORD );
+            Class.forName(DRIVER);
+            connection = DriverManager.getConnection(URL,USER,PASSWORD);
             System.out.println("Conectado");
         }catch (ClassNotFoundException | SQLException ex) {
             ex.printStackTrace();

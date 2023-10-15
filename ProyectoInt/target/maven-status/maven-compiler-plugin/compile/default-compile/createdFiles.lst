@@ -1,3 +1,5 @@
-modelo\Empleado.class
 dao\EmpleadoDAO.class
+util\DBConnection.class
+controller\EmpleadoController.class
+modelo\Empleado.class
 dao\EmpleadoDAOImpl.class
