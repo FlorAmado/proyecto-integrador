@@ -4,16 +4,16 @@ package util;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import javax.activation.DataSource;
-import static jdk.nashorn.internal.codegen.CompilerConstants.className;
-import org.apache.commons.dbcp2.BasicDataSource;
+
+
+
 
 
 public class DBConnection {
     private static final String URL = "jdbc:mysql://localhost:3306/sysdb?zeroDateTimeBehavior=CONVERT_TO_NULL";
     private static final String USER = "root";
     private static final String PASSWORD = "";
-    private static final String DRIVER = "com.mysql.oj.jdbc.Driver";
+    private static final String DRIVER = "com.mysql.cj.jdbc.Driver"; //"com.mysql.oj.jdbc.Driver";
     private static Connection connection = null;
 
     public static Connection getConnection(){
@@ -49,5 +49,8 @@ public class DBConnection {
 //    }
     
 
+    public static void main(String[] args) {
+        DBConnection.getConnection();
+    }
         
 }
